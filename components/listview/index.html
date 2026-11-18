@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="listview.css">
+</head>
+<body>
+
+    <ul class="list-view">
+    <!-- Tarjeta 1: Con imagen en el header y 3 botones opcionales -->
+    <li class="list-item">
+        <div class="list-item-header">
+            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=150&q=80" alt="Miniatura" class="list-item-img">
+            <div class="list-item-info">
+                <h4 class="list-item-title">Título con imagen</h4>
+                <span class="list-item-subtitle">Subtítulo descriptivo</span>
+            </div>
+        </div>
+        <div class="list-item-body">
+            <p>Contenido principal de la tarjeta dentro del ListView.</p>
+        </div>
+        <div class="list-item-actions">
+            <button class="list-btn list-btn-primary">Acción 1</button>
+            <button class="list-btn list-btn-secondary">Acción 2</button>
+            <button class="list-btn list-btn-accent">Acción 3</button>
+        </div>
+    </li>
+
+    <!-- Tarjeta 2: Sin imagen en el header y sin botones -->
+    <li class="list-item">
+        <div class="list-item-header">
+            <div class="list-item-info">
+                <h4 class="list-item-title">Título sin imagen</h4>
+                <span class="list-item-subtitle">Subtítulo descriptivo</span>
+            </div>
+        </div>
+        <div class="list-item-body">
+            <p>Tarjeta limpia cuando se omite la imagen y los botones opcionales.</p>
+        </div>
+    </li>
+</ul>
+    
+</body>
+</html>

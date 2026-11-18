@@ -1,0 +1,103 @@
+
+.nav {
+    background-color: #f29cab;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    
+    /* Posicionamiento fijo al borde inferior de la pantalla */
+    position: fixed;
+    bottom: 15px;              /* Deja un pequeño respiro estético abajo para que luzca el border-radius (pon 0px si lo quieres pegado al ras) */
+    left: 50%;                 /* Lo manda al centro... */
+    transform: translateX(-50%); /* ...y lo ajusta exactamente a la mitad */
+    width: calc(100% - 30px);  /* Ocupa todo el ancho menos 15px de margen a cada lado */
+    max-width: 900px;          /* Opcional: evita que en pantallas gigantes de PC se estire demasiado */
+    z-index: 1000;             /* Asegura que siempre quede por encima de todo el contenido */
+    
+    border-radius: 20px;
+    overflow: hidden;
+    
+    /* Sombra exterior difuminada en tono rosa + un ligero brillo interior arriba */
+    box-shadow: 0 10px 25px rgba(242, 156, 171, 0.45),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.nav > .nav-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav > .nav-list > .nav-option {
+    list-style: none;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    height: 70px;
+    position: relative;
+    
+    border: none;
+    border-right: 1px solid rgba(150, 60, 80, 0.15);
+    
+    color: #fff9fa;
+    text-shadow: 0 1px 2px rgba(143, 59, 77, 0.25);
+    background-color: #ffb6c1;
+    
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+    font-family: 'Poppins', system-ui, sans-serif;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav > .nav-list > .nav-option i {
+    font-size: 1.4rem;
+    font-weight: normal;
+    transition: transform 0.25s ease;
+}
+
+.nav > .nav-list > .nav-option:first-child {
+    border-left: 1px solid rgba(150, 60, 80, 0.15);
+}
+
+.nav > .nav-list > .nav-option::after {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    width: 0%;
+    height: 3px;
+    background-color: #8f3b4d;
+    border-radius: 10px;
+    transition: width 0.25s ease;
+}
+
+.nav > .nav-list > .nav-option:hover {
+    background-color: #ffd6de;
+    color: #8f3b4d;
+    text-shadow: none;
+}
+
+.nav > .nav-list > .nav-option:hover i {
+    transform: translateY(-2px) scale(1.08);
+}
+
+.nav > .nav-list > .nav-option:hover::after {
+    width: 24px;
+}
+
+.nav > .nav-list > .nav-option:active {
+    transform: scale(0.97);
+}

@@ -1,0 +1,50 @@
+/* Contenedor que almacena toda la app */
+main {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    box-sizing: border-box;
+    padding: 1.5rem;
+}
+
+/* Bloque central al cual le puedes poner diferentes tipos de bloques para armar el diseño responsivo */
+/* Cada bloque central solo acepta un tamaño correspondiente a 8 bloques pequeños */
+.block-box {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+/* Tamaño de los bloques que puedes poner en el bloque central, 1 es el más pequeño y 8 el más grande */
+.block-1 { flex: 1 1 0; }
+.block-2 { flex: 2 1 0; }
+.block-3 { flex: 3 1 0; }
+.block-4 { flex: 4 1 0; }
+.block-5 { flex: 5 1 0; }
+.block-6 { flex: 6 1 0; }
+.block-7 { flex: 7 1 0; }
+.block-8 { flex: 8 1 0; }
+
+/* Los bloques redistribuyen su posición para dispositivos más pequeños como tablets o celulares */
+@media (max-width: 768px) {
+    .block-1,
+    .block-2 {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .block-1,
+    .block-2,
+    .block-3,
+    .block-4,
+    .block-5,
+    .block-6,
+    .block-7,
+    .block-8 {
+        flex: 0 0 100%;
+    }
+}

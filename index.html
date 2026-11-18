@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros de psicología</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/components/blocks/blocks.css">
+    <link rel="stylesheet" href="/components/nav/nav.css">
+    <link rel="stylesheet" href="/components/listview/listview.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#e8a4b9">
+</head>
+<body>
+
+    <main>
+
+        <div class="block-box">
+            <div class="block-8">
+                <h1 class="centrar-texto">Libros de psicología</h1>
+            </div>
+        </div>
+
+        <div class="block-8 space">
+
+            <div class="block-2"></div>
+            <div class="block-4">
+
+                <!-- 1. VISTA DE LIBRERÍA -->
+                <div class="block-box">
+                    <div class="block-8 caja-list-view" id="caja-list-view" tabindex="0" style="display: none;">
+                        <ul class="list-view">
+                            <!-- Se rellena dinámicamente desde main.ts -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. VISTA DE FAVORITOS -->
+                <div class="block-box">
+                    <div class="block-8 caja-list-view" id="caja-favoritos" tabindex="0" style="display: none;">
+                        <ul class="list-view-favoritos">
+                            <!-- Se rellena desde DB_CASS_PISCOLOGIA -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3. VISTA DE INFORMACIÓN (Lista para que la personalices) -->
+                <div class="block-box">
+                    <div class="block-8 caja-list-view" id="caja-informacion" tabindex="0" style="display: none; padding: 20px;">
+                        <div class="list-item" style="padding: 20px;">
+                            <h2 style="margin-bottom: 10px;">Acerca de esta aplicación</h2>
+                            <p style="margin-bottom: 12px;">
+                                Esta plataforma te permite explorar, consultar y organizar las obras más recientes y clásicas sobre psicología en español utilizando el catálogo abierto de <strong>Open Library</strong>.
+                            </p>
+                            <h3 style="margin-bottom: 8px;">¿Cómo funciona?</h3>
+                            <ul style="margin-left: 20px; margin-bottom: 15px; line-height: 1.6;">
+                                <li><strong>Librería:</strong> Explora los 100 títulos más recientes en español y accede a su lectura online o préstamo digital.</li>
+                                <li><strong>Favoritos:</strong> Guarda tus libros de interés en tu dispositivo y lleva el control exacto de la página en la que te quedaste leyendo.</li>
+                            </ul>
+                            <p style="font-size: 0.9em; opacity: 0.8;">
+                                Desarrollado por Cassie — Todos los datos de lectura se guardan localmente en tu navegador.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="block-2 space"></div>
+
+        </div>
+       
+    </main>
+
+    <nav class="nav">
+        <ul class="nav-list">
+            <li class="nav-option" id="nav-libreria">
+                <i class="ri-book-open-line"></i>
+                <span>Librería</span>
+            </li>
+            <li class="nav-option" id="nav-favoritos">
+                <i class="ri-heart-3-line"></i>
+                <span>Favoritos</span>
+            </li>
+            <li class="nav-option" id="nav-informacion">
+                <i class="ri-information-line"></i>
+                <span>Información</span>
+            </li>
+        </ul>
+    </nav>
+    
+    <script type="module" src="main.js"></script>
+</body>
+</html>

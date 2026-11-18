@@ -1,0 +1,27 @@
+body{
+    background-color: pink;
+}
+.space{
+    height: 50px;
+}
+.centrar-texto {
+    text-align: center;
+}
+
+.caja-list-view {
+    height: 400px;
+    overflow-y: auto; /* Habilita el scroll vertical con ratón y touch */
+    overflow-x: hidden; /* Evita scroll horizontal accidental */
+    overscroll-behavior-y: contain; /* Evita que al llegar al tope se mueva toda la página */
+    scroll-behavior: smooth; /* Desplazamiento suave con las flechas */
+    -webkit-overflow-scrolling: touch; /* Fluidez extra en pantallas táctiles */
+    display: none;
+}
+
+.list-view-favoritos > .list-item {
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Evita que el padding sume ancho extra */
+    max-width: 100%;       /* Evita que el elemento crezca más allá de su contenedor */
+    overflow: hidden;      /* Corta cualquier contenido interno que sobresalga */
+    margin-left: -20px;
+}
